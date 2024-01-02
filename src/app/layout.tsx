@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/Header';
 import { ThemeProvider } from '@/components/theme-provider';
+import ScrollProgress from '@/components/ScrollBarProgress';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,9 +14,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ScrollProgress />
           <Header />
           {children}
         </ThemeProvider>
