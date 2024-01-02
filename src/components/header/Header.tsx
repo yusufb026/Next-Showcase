@@ -19,7 +19,7 @@ const links: TLink[] = [
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <header className="px4 border-b py-3  ">
+    <header className="border-b px-4 py-3">
       <Container>
         <div className="relative flex h-16 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
