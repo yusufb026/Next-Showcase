@@ -1,11 +1,19 @@
+import { Roboto } from 'next/font/google';
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/Header';
 import { ThemeProvider } from '@/components/theme-provider';
 import ScrollProgress from '@/components/ScrollBarProgress';
+import Footer from '@/components/footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Kids Corner School - Berrechid',
@@ -15,11 +23,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={[roboto.className, 'min-h-screen'].join(' ')}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ScrollProgress />
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
