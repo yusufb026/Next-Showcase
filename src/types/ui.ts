@@ -8,3 +8,9 @@ export type TNabBarLinks = {
   ContactezNous: { label: string; link: TUrl };
   Inscription: { label: string; link: TUrl };
 };
+
+export type TAtelierList = {
+  title: string;
+  description: string;
+  image: `/ateliers/${string}`;
+}[];

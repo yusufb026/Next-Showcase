@@ -16,7 +16,7 @@ export const MenuLink: FC<TLink & ButtonProps & { glow?: boolean }> = ({ label, 
       variant={link == currentPath ? 'linkSelected' : 'linkUnSelected'}
       font={link == currentPath ? 'default' : 'default'}
       className="flex justify-start"
-      bold={link == currentPath ? 'semibold' : 'default'}
+      bold={link == currentPath ? 'default' : 'default'}
       {...props}
     >
       <Link href={link} className="transition-colors ">
