@@ -1,5 +1,11 @@
-import Image from 'next/image';
+import Hero from '@/components/acceuil/Hero';
+import NosAteliers from '@/components/acceuil/NosAteliers';
 
 export default function Home() {
-  return <div>Setup</div>;
+  return (
+    <main>
+      <Hero />
+      <NosAteliers />
+    </main>
+  );
 }
