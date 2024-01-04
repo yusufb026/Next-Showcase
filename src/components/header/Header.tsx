@@ -1,4 +1,6 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, useEffect, useState } from 'react';
 import Container from '../ui/Container';
 import Link from 'next/link';
 import { Button } from '../ui/button';
@@ -7,6 +9,8 @@ import { MenuLink } from './MenuLink';
 import { DropdownLinks } from './DropdownLinks';
 import { TLink, TNabBarLinks } from '@/types/ui';
 import SheetMenu from './SheetMenu';
+import Logo from '../ui/Logo';
+import { twMerge } from 'tailwind-merge';
 
 interface HeaderProps {}
 
@@ -25,13 +29,36 @@ const navBarLinks: TNabBarLinks = {
 };
 
 const Header: FC<HeaderProps> = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  function checkScroll() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScroll);
+    return () => {
+      window.removeEventListener('scroll', checkScroll);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 px-4 text-xl ">
+    <header className={twMerge('sticky top-0 px-4 text-xl duration-700')}>
       <Container>
-        <div className="relative flex h-16 w-full items-center justify-between ">
+        <div
+          className={twMerge(
+            'relative flex h-16 w-full items-center justify-between',
+            isScrolled && 'top-5 rounded-lg bg-background/50 px-5 backdrop-blur-sm  duration-700'
+          )}
+        >
           <div className="flex items-center">
             <Link href="/" className="ml-4 flex lg:ml-0">
-              <h3 className="text-xl font-bold">Kids Corner School</h3>
+              <Logo />
             </Link>
           </div>
 
