@@ -52,8 +52,7 @@ const SheetMenu: FC<SheetMenuProps> = ({ navBarLinks, ...props }) => {
                   <DotCircleGreenGlowing
                     glow={navBarLinks.Information.link.find((element) => element.link == currentPath) ? true : false}
                   />
-
-                  <span className="mr-2">{navBarLinks.Information.label}</span>
+                  <span className="mr-3 text-base ">{navBarLinks.Information.label}</span>
                 </AccordionTrigger>
                 {navBarLinks.Information.link.map((route, index) => {
                   return (

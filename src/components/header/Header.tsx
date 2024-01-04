@@ -26,7 +26,7 @@ const navBarLinks: TNabBarLinks = {
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <header className="sticky top-0 px-4">
+    <header className="sticky top-0 px-4 text-xl ">
       <Container>
         <div className="relative flex h-16 w-full items-center justify-between ">
           <div className="flex items-center">
@@ -35,18 +35,18 @@ const Header: FC<HeaderProps> = () => {
             </Link>
           </div>
 
-          <nav className="mx-6 hidden items-center space-x-4 md:flex lg:space-x-6">
+          <nav className="mx-6 hidden items-center space-x-4 lg:flex lg:space-x-6">
             <MenuLink label={navBarLinks.Acceuil.label} link={navBarLinks.Acceuil.link} />
             <DropdownLinks label={navBarLinks.Information.label} links={navBarLinks.Information.link} />
             <MenuLink label={navBarLinks.ContactezNous.label} link={navBarLinks.ContactezNous.link} />
             <MenuLink label={navBarLinks.Inscription.label} link={navBarLinks.Inscription.link} />
           </nav>
 
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center lg:flex">
             <ModeToggleDesktop />
           </div>
-          <div className="flex items-center md:hidden">
-            <SheetMenu className="block  md:hidden" navBarLinks={navBarLinks} />
+          <div className="flex items-center lg:hidden">
+            <SheetMenu className="block  lg:hidden" navBarLinks={navBarLinks} />
           </div>
         </div>
       </Container>
