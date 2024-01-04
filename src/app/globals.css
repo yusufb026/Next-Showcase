@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 90 80.3% 4.1%;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -56,4 +56,16 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.h1 {
+  @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
+}
+
+.section-inner-spacing {
+  @apply px-4 py-8 lg:px-2 lg:py-4;
+}
+
+.div-spacing {
+  @apply mb-12;
 }
