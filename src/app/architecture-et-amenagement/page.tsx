@@ -1,3 +1,5 @@
+import Article from '@/components/article/Article';
+
 export default function Page() {
-  return <main>architecture et amenagement</main>;
+  return <Article />;
 }
