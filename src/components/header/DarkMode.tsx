@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { MoonIcon , SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 import { Button, ButtonProps } from '@/components/ui/button';
@@ -9,7 +9,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
