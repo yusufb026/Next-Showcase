@@ -1,5 +1,5 @@
-
-
 ## Next-Showcase
 
-###### Building something cool
+Preview
+
+![Alt Text](preview/preview.png)
